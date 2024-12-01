@@ -52,7 +52,7 @@ public interface CustomItemOptions {
     /**
      * Gets the item's item model data predicate.
      *
-     * @return the item's item model model data
+     * @return the item's item model data
      */
     @NonNull String itemModelData();
 
