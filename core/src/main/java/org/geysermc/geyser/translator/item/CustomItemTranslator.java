@@ -53,7 +53,7 @@ public final class CustomItemTranslator {
             return null;
         }
 
-        Key itemModelData = components.getOrDefault(DataComponentType.ITEM_MODEL, Key.key(Key.MINECRAFT_NAMESPACE));
+        Key itemModelData = components.getOrDefault(DataComponentType.ITEM_MODEL, Key.key(""));
         int customModelData = components.getOrDefault(DataComponentType.CUSTOM_MODEL_DATA, 0);
         boolean checkDamage = mapping.getJavaItem().maxDamage() > 0;
         int damage = !checkDamage ? 0 : components.getOrDefault(DataComponentType.DAMAGE, 0);
