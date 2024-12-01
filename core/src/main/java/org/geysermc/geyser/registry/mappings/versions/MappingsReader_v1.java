@@ -139,6 +139,11 @@ public class MappingsReader_v1 extends MappingsReader {
             customItemOptions.customModelData(customModelData.asInt());
         }
 
+        JsonNode itemModelData = node.get("item_model_data");
+        if (itemModelData != null && itemModelData.isTextual()) {
+            customItemOptions.itemModelData(itemModelData.asText());
+        }
+
         JsonNode damagePredicate = node.get("damage_predicate");
         if (damagePredicate != null && damagePredicate.isInt()) {
             customItemOptions.damagePredicate(damagePredicate.asInt());
