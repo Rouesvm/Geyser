@@ -90,12 +90,11 @@ public final class CustomItemTranslator {
             }
 
             String itemModelDataOption = options.itemModelData();
+            OptionalInt customModelDataOption = options.customModelData();
+
             if (!itemModelDataOption.isEmpty() && !itemModelDataOption.contains(itemModelData.toString())) {
                 continue;
-            }
-
-            OptionalInt customModelDataOption = options.customModelData();
-            if (customModelDataOption.isPresent() && customModelData < customModelDataOption.getAsInt()) {
+            } else if (customModelDataOption.isPresent() && customModelData < customModelDataOption.getAsInt()) {
                 continue;
             }
 
